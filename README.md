@@ -37,7 +37,7 @@ and connect to a Copilot Studio agent — end to end, before touching your own A
 7. **Connect to Copilot Studio** — The wizard generates step-by-step MCP connection instructions tailored to your auth type
 8. **Test** — Enable generative orchestration and verify your tools with natural language
 
-<img width="700" height="390" alt="image" src="https://github.com/user-attachments/assets/6f2c13f0-d70e-4179-8f32-6458c939a710" />
+<img width="700" height="410" alt="image" src="https://github.com/user-attachments/assets/6f2c13f0-d70e-4179-8f32-6458c939a710" />
 
 ---
 
