@@ -12,7 +12,7 @@ and connects it to your Copilot Studio agent.
 
 ## 🚀 Get started
 
-Download `mcp-connector-kit.html` and open it in any modern browser.
+Download `mcp-connector-kit.html` and open it in any modern browser — the wizard guides you through the rest.
 
 No installation, no dependencies, no network required.
 
