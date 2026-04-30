@@ -26,6 +26,7 @@ The wizard has two paths:
 
 
 
+
 **Learn first** — Start with a working sample using the Open Library public API.
 Run live API calls in the browser, download the pre-built server files, deploy to Azure,
 and connect to a Copilot Studio agent — end to end, before touching your own API.
