@@ -31,16 +31,16 @@ The wizard has two paths:
 Run live API calls in the browser, download the pre-built server files, deploy to Azure,
 and connect to a Copilot Studio agent — end to end, before touching your own API.
 
-**Build your connector** — Eight guided steps for your own API:
+**Build your MCP connector** — Eight guided steps for your own API:
 
-1. **API details** — Base URL, connector name, auth pattern
-2. **Define tools** — Name, description, HTTP method, path, and parameters for each endpoint
-3. **Security** — Inbound key configuration (or token validation for Entra flows)
-4. **Generate & download** — Downloads `server.ts`, `package.json`, `tsconfig.json`, `.env.example`, `.gitignore`, and `DEPLOYMENT.md`
-5. **System check** — Verify Node 20+, Azure CLI, and Copilot Studio access before deploying
-6. **Deploy to Azure** — Pre-filled `az webapp up` and `az webapp config appsettings set` commands
-7. **Connect to Copilot Studio** — Step-by-step MCP wizard instructions tailored to your auth type
-8. **Test** — Enable generative orchestration and verify with natural language
+1. **API details** — Enter your API base URL, connector name, and choose an auth pattern
+2. **Define tools** — Describe each endpoint the agent can call — name, method, path, and parameters
+3. **Security** — Configure your inbound key, or token validation for Entra flows
+4. **Generate & download** — The wizard downloads your complete server project files: `server.ts`, `package.json`, `tsconfig.json`, `.env.example`, `.gitignore`, and `DEPLOYMENT.md`
+5. **System check** — Verify Node 20+, Azure CLI, and Copilot Studio access are ready
+6. **Deploy** — Run the pre-filled PowerShell commands to test locally, then deploy to Azure App Service with a single `az webapp up` command
+7. **Connect to Copilot Studio** — The wizard generates step-by-step MCP connection instructions tailored to your auth type
+8. **Test** — Enable generative orchestration and verify your tools with natural language
 
 ---
 
