@@ -22,11 +22,6 @@ No installation, no dependencies, no network required.
 
 The wizard has two paths:
 
-<img width="700" height="390" alt="image" src="https://github.com/user-attachments/assets/6f2c13f0-d70e-4179-8f32-6458c939a710" />
-
-
-
-
 **Learn first** — Start with a working sample using the Open Library public API.
 Run live API calls in the browser, download the pre-built server files, deploy to Azure,
 and connect to a Copilot Studio agent — end to end, before touching your own API.
@@ -41,6 +36,8 @@ and connect to a Copilot Studio agent — end to end, before touching your own A
 6. **Deploy** — Run the pre-filled PowerShell commands to test locally, then deploy to Azure App Service with a single `az webapp up` command
 7. **Connect to Copilot Studio** — The wizard generates step-by-step MCP connection instructions tailored to your auth type
 8. **Test** — Enable generative orchestration and verify your tools with natural language
+
+<img width="700" height="390" alt="image" src="https://github.com/user-attachments/assets/6f2c13f0-d70e-4179-8f32-6458c939a710" />
 
 ---
 
