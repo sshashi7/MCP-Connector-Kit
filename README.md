@@ -20,13 +20,22 @@ No installation, no dependencies, no network required.
 
 ## 🧭 How it works
 
-The wizard guides you through five things:
+The wizard has two paths:
 
-1. **Configure** — Name your server, enter your API base URL, set rate limits
-2. **Define tools** — Describe what each endpoint does in natural language (this is what the agent reasons over)
-3. **Choose auth** — 9 patterns supported: Entra ID Delegated, Service Principal, OAuth 2.0, Bearer, API Key, Basic, and more
-4. **Generate** — Downloads a complete TypeScript MCP server project ready for `npm install`
-5. **Deploy & connect** — Pre-filled Azure CLI commands and step-by-step Copilot Studio connection instructions
+**Learn first** — Start with a working sample using the Open Library public API.
+Run live API calls in the browser, download the pre-built server files, deploy to Azure,
+and connect to a Copilot Studio agent — end to end, before touching your own API.
+
+**Build your connector** — Eight guided steps for your own API:
+
+1. **API details** — Base URL, connector name, auth pattern
+2. **Define tools** — Name, description, HTTP method, path, and parameters for each endpoint
+3. **Security** — Inbound key configuration (or token validation for Entra flows)
+4. **Generate & download** — Downloads `server.ts`, `package.json`, `tsconfig.json`, `.env.example`, `.gitignore`, and `DEPLOYMENT.md`
+5. **System check** — Verify Node 20+, Azure CLI, and Copilot Studio access before deploying
+6. **Deploy to Azure** — Pre-filled `az webapp up` and `az webapp config appsettings set` commands
+7. **Connect to Copilot Studio** — Step-by-step MCP wizard instructions tailored to your auth type
+8. **Test** — Enable generative orchestration and verify with natural language
 
 ---
 
