@@ -2,284 +2,161 @@
 
 ⚠️ **FOR PROOF-OF-CONCEPT AND DEMO USE ONLY**
 
-This toolkit generates TypeScript MCP servers for Copilot Studio **PoC/demo purposes only**. See [Production Deployment](#-production-deployment-not-ready) section before any production use.
+---
 
-> **🚀 Ready?** Jump to [Quick Start](#-quick-start-3-steps).
+## What Is This?
 
+An interactive tool that generates TypeScript MCP (Model Context Protocol) servers for Copilot Studio. It lets Copilot Studio agents call your REST API as a tool — with proper authentication, error handling, and deployment to Azure.
 
-
-## 🌐 Using the Web Tool
-
-**No installation needed** — run the tool directly in your browser:
-
-### Quick Start
-1. **Open the tool:** `mcp-connector-kit.html`
-2. **Fill in your test API details** (base URL, test credentials only)
-3. **Generate your MCP server** and download the code
-4. **Review the generated code** before deploying
-5. **Store credentials in `.env`** locally (never in code)
-6. **Deploy and test** your MCP server
+**Input:** Your API details (base URL, credentials, endpoints)  
+**Output:** Ready-to-deploy TypeScript server code
 
 ---
 
-## 📥 Download & Run Locally
+## Why Use It?
 
-**Prefer to run locally for maximum privacy?** No problem — everything is self-contained.
+- **No boilerplate** — Skip weeks of MCP server setup
+- **Test real APIs** — Includes guided walkthroughs with GitHub/Spotify-style APIs
+- **Safe for PoC** — All code runs locally; credentials never leave your browser
+- **Works everywhere** — Deploy to Azure, AWS, GCP, or anywhere Node.js runs
 
-### Download & Open
+---
+
+## How to Get Started
+
+### 1. Open the Tool
+Download and open `mcp-connector-kit.html` in any modern browser:
+
 ```bash
-# Download mcp-connector-kit.html from this repo
-# Then just double-click it, or:
 # Windows PowerShell
 start mcp-connector-kit.html
+
+# Mac
+open mcp-connector-kit.html
+
+# Linux
+firefox mcp-connector-kit.html
 ```
 
-✅ Works immediately  
-✅ Completely offline  
-✅ No internet connection needed  
-✅ No dependencies or setup  
+Works completely offline. No installation needed.
 
-### Why Run Locally?
-- ✅ **Complete privacy** — File never leaves your computer
-- ✅ **Works offline** — Zero internet required
-- ✅ **Maximum transparency** — Can inspect the entire source code with a text editor
-- ✅ **No third-party involvement** — Runs completely on your machine
-- ✅ **Same functionality** — Identical to the web version
+### 2. Choose Your Path
+- **Path A: Learn First** — Generate a connector using a free test API (GitHub, Spotify, etc.)
+- **Path B: Your API** — Jump straight to your own test API
 
----
-
-## 🚀 Quick Start (3 Steps)
-
-### Step 1: Open the Interactive Guide
-```
-Open: mcp-connector-kit.html in your web browser
-```
-
-Choose your path:
-- **Path A (Sample First)** — Start with free Open Library API (recommended for learning)
-- **Path B (Your API)** — Jump straight to your own test API
-
-### Step 2: Configure & Generate
-1. Fill in your **test API details** (base URL, test credentials)
-2. Define the tools (API operations Copilot can call)
-3. Set up security (inbound/outbound authentication)
+### 3. Configure & Generate
+1. Enter your API details (base URL, test credentials only)
+2. Select endpoints Copilot should be able to call
+3. Choose authentication type (Bearer token, API key, OAuth, etc.)
 4. Download the generated TypeScript project
 
-### Step 3: Deploy & Test
-1. Run locally: `npm install` → `npm run dev`
-2. Deploy to Azure: `az webapp up`
-3. Connect to Copilot Studio agent
-4. Test and demo
-5. **Clean up resources when done**
+### 4. Deploy & Test
+```bash
+# Local testing
+npm install
+npm run dev
+
+# Deploy to Azure
+az webapp up
+
+# Connect to Copilot Studio agent and test
+```
 
 ---
 
-## 🔐 Authentication Methods — Quick Reference
+## 🚀 Quick Path (3 Steps)
 
-### Bearer Token (Simplest)
-```
-Authorization: Bearer <token>
-```
-**Use:** For APIs with bearer tokens (GitHub PAT, Slack, etc.)  
-**PoC Tip:** Get a **test/demo** token, never production
-
-### API Key (Header)
-```
-X-API-Key: <key>
-```
-**Use:** For APIs requiring custom header keys (Stripe test key, etc.)  
-**PoC Tip:** Use **test/sandbox** API keys, not live keys
-
-### API Key (Query)
-```
-https://api.example.com/data?api_key=<key>
-```
-**Use:** For APIs requiring key as URL parameter  
-**PoC Tip:** Test keys only; avoid query params in production
-
-### Basic Auth
-```
-Authorization: Basic <base64(username:password)>
-```
-**Use:** For APIs with username/password  
-**PoC Tip:** Use **test account**, never production credentials
-
-### OAuth 2.0
-Multiple steps for user authorization; good for apps requiring permission.  
-**Use:** For APIs like GitHub, Google, Salesforce  
-**PoC Tip:** Register a **test app** in sandbox mode
-
-### Entra ID (Azure)
-Authentication via Microsoft Entra ID / Azure AD  
-**Use:** For Azure APIs, Microsoft Graph, internal Microsoft services  
-**PoC Tip:** Create **test app registration** in test tenant
-
-### SharePoint
-SharePoint-specific OAuth flow  
-**Use:** For SharePoint lists, libraries, and APIs  
-**PoC Tip:** Use **test SharePoint site**, not production
-
-**Need a testing walkthrough?** See [MCP_API_Setup_Guide.docx](./MCP_API_Setup_Guide.docx) for step-by-step examples that show how to generate and validate connectors using real-world APIs (for example, GitHub and Spotify) before trying your own API.
+1. **Open:** `mcp-connector-kit.html` in your browser
+2. **Configure:** Fill in test API details, choose endpoints, select auth
+3. **Deploy:** Run locally or push to Azure
 
 ---
 
-## 📋 What's in This Folder?
+## 📋 Files in This Kit
 
 | File | Purpose |
 |------|---------|
-| **mcp-connector-kit.html** | Interactive tool — configure & generate MCP server (main entry point) |
-| **MCP_API_Setup_Guide.docx** | Testing guide — hands-on walkthroughs for generating connectors against sample public APIs (such as GitHub/Spotify) so teams can validate the flow before using their own API |
+| **mcp-connector-kit.html** | Interactive generator — configure & generate your MCP server |
+| **MCP_API_Setup_Guide.docx** | Test guide — hands-on examples using GitHub/Spotify-style APIs |
 | **LICENSE.md** | Usage terms and restrictions (PoC/demo only) |
-| **PRODUCTION_READINESS.md** | Checklist for production deployment (30+ items, 5-9 weeks of work) |
+| **PRODUCTION_READINESS.md** | Security checklist for production deployment |
 | **README.md** | This file |
 
 ---
 
-## 🎯 What You'll Get
+## Key Safety Guidelines
 
-After completing the PoC:
-
-✅ **TypeScript MCP Server** running on Azure App Service  
-✅ **Secure authentication** (inbound + outbound)  
-✅ **Copilot Studio integration** — agents can call your API  
-✅ **Ready-to-test** TypeScript project  
-✅ **Documentation** with deployment commands  
+✅ **Use test/demo credentials only** — Never enter production API keys  
+✅ **Review generated code** — Inspect before deploying  
+✅ **Store credentials in `.env`** — Keep out of version control  
+✅ **Clean up after testing** — Delete Azure resources and credentials  
+✅ **Check PRODUCTION_READINESS.md** — Required for any production use  
 
 ---
 
-## 💡 Tips for Success
+## What This Kit Includes
 
-✅ **Write good tool descriptions** — Copilot reads these to decide when to invoke tools  
-✅ **Start simple** — Test with one GET endpoint first  
-✅ **Use test credentials** — Never paste production keys/tokens  
-✅ **Test locally** — Run `npm run dev` before deploying  
-✅ **Clean up after** — Delete resources and credentials when done  
+- ✅ MCP server boilerplate (TypeScript)
+- ✅ Authentication templates (Bearer, API Key, OAuth, Basic, Entra ID, SharePoint)
+- ✅ Environment variable support
+- ✅ Basic error handling and health checks
+- ✅ Azure App Service deployment guide
 
 ---
 
-## 🔒 Security Notes
+## What This Kit Does NOT Include (Add for Production)
 
-### This PoC Kit Includes:
-- ✅ Authentication template (choose your type)
-- ✅ Basic error handling
-- ✅ Environment variable support (`.env`)
-- ✅ Health checks
-- ✅ Template rate limiting (not enforced)
-
-### This PoC Kit Does NOT Include (Add for Production):
 - ❌ Rate limiting enforcement
 - ❌ Secrets management (Azure Key Vault)
 - ❌ Audit logging
-- ❌ API versioning enforcement
 - ❌ Request validation/sanitization
 - ❌ CORS policies
 - ❌ Load balancing / high availability
 - ❌ Encryption at rest
 - ❌ Compliance controls (SOC 2, HIPAA, etc.)
 
-**Before production:** See [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md) — mandatory 5-9 week hardening.
+**Production requires 5-9 weeks of hardening.** See [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md) for the complete checklist.
 
 ---
 
-## 🔐 Security & Privacy
+## How the Tool Works
 
-**The MCP Connector Kit tool is safe to use:**
-
-- ✅ **Client-side only** — Everything runs in your browser
-- ✅ **No server** — Your credentials never leave your machine
-- ✅ **No logging** — We don't collect or store any data
-- ✅ **No tracking** — No cookies, analytics, or monitoring
-- ✅ **Open source** — All code is visible for inspection
-
-### What Happens With Your Credentials
-
-1. You enter **test credentials** in the HTML tool
-2. Tool generates TypeScript code locally in your browser
-3. Code downloads to your computer
-4. You store credentials in `.env` file (locally, never in git)
-5. You run/deploy the code
-
-**Credentials never leave your browser or machine.**
-
-### Best Practices
-
-- ✅ **Use test credentials only** — Never enter production API keys
-- ✅ **Audit the generated code** — Review it before deploying
-- ✅ **Keep .env secure** — Exclude it from version control and never commit
-- ✅ **Trust but verify** — You can inspect the HTML source code
-- ✅ **Use updated browsers** — Standard browser security protections apply
+1. **Your browser only** — All code generation happens locally; credentials never leave your machine
+2. **No external calls** — Completely offline after loading
+3. **Inspect the source** — Open mcp-connector-kit.html in any text editor to verify
 
 ---
 
-## ❓ FAQ
+## Support & Questions
 
-**Q: Can I use this with any REST API?**  
-A: Yes! Any REST API with standard auth (Bearer, API Key, OAuth, Basic, Entra ID, SharePoint).
+| Question | Answer |
+|----------|--------|
+| **Any REST API?** | Yes — Bearer token, API Key, OAuth, Basic auth, Entra ID, SharePoint |
+| **Deploy to AWS/GCP?** | Yes — Node.js runs anywhere |
+| **Custom authentication?** | Yes — Generated code is fully customizable |
+| **Ready for production?** | No — This is PoC/demo only |
+| **Support available?** | No — As-is, no SLA |
 
-**Q: Can I deploy to AWS/GCP instead of Azure?**  
-A: Yes. The generated Node.js server runs anywhere. Guide shows Azure, but deployment is flexible.
-
-**Q: What if my API needs custom authentication?**  
-A: The generated server code is fully customizable. Edit the auth middleware as needed.
-
-**Q: Is this ready for production?**  
-A: **No.** This is PoC/demo only. Production requires security hardening. See [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md).
-
-**Q: Do you provide support?**  
-A: No. This is provided as-is with no SLA. See [LICENSE.md](./LICENSE.md) for full terms.
+See [LICENSE.md](./LICENSE.md) for full terms.
 
 ---
 
 ## 🚀 Next Steps
 
-1. **Ready to start?** Open `mcp-connector-kit.html` in your browser
-2. **Need a safe test path first?** Check [MCP_API_Setup_Guide.docx](./MCP_API_Setup_Guide.docx) for guided GitHub/Spotify-style API examples before moving to your own API
-3. **Questions?** Review this README, [MCP_API_Setup_Guide.docx](./MCP_API_Setup_Guide.docx), or [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md)
+1. **Get started** → Open `mcp-connector-kit.html` now
+2. **Test first** → Use [MCP_API_Setup_Guide.docx](./MCP_API_Setup_Guide.docx) examples before your own API
+3. **Going to production?** → Review [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md)
 
 ---
 
-## ⚠️ Production Deployment (NOT Ready)
+## Important Notes
 
-**This kit is PoC/demo only.** Before ANY production deployment:
+- ⚠️ **This is a PoC/demo kit only** — Not suitable for production without significant hardening
+- ⚠️ **Never use production credentials** — Only test/demo credentials during development
+- ⚠️ **Clean up resources** — Delete all test credentials and Azure resources after testing
 
-✅ Read [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md) completely  
-✅ Conduct security review with your security team  
-✅ Conduct compliance review (GDPR, HIPAA, SOC 2, etc.)  
-✅ Implement hardening checklist (5-9 weeks)  
-✅ Performance testing and optimization  
-✅ Monitoring, alerting, and incident response setup  
-✅ Get sign-off from security, DevOps, and compliance teams  
-
-**Estimated timeline:** 5-9 weeks after PoC completion.
-
----
-
-## 📝 License & Terms
-
-This toolkit is provided **as-is** for PoC and demo use only. See [LICENSE.md](./LICENSE.md) for:
-- Usage rights and restrictions
-- Liability disclaimer
-- Credential management requirements
-- Data protection responsibilities
-
----
-
-## 🎯 Summary
-
-| What | Answer |
-|------|--------|
-| **Use for?** | PoC, demo, testing, learning, evaluation |
-| **Not for?** | Production (without 5-9 weeks of hardening) |
-| **Time to PoC?** | 2-4 hours |
-| **Time to Production?** | 5-9 weeks (plus hardening) |
-| **Credentials?** | Test/demo only (never production) |
-| **Support?** | None (as-is) |
-| **Cost?** | Free (except Azure resources you create) |
+For production deployment, see [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md) — mandatory 5-9 week security hardening required.
 
 ---
 
 **Ready to demo?** Open `mcp-connector-kit.html` in your browser now! 🚀
-
-**Questions?** Check [LICENSE.md](./LICENSE.md) or [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md).
-
-**Important:** For production use, see [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md) — mandatory security hardening required.
