@@ -6,10 +6,9 @@
 
 ## What Is This?
 
-An interactive tool that generates TypeScript MCP (Model Context Protocol) servers for Copilot Studio. It lets Copilot Studio agents call your REST API as a tool — with proper authentication, error handling, and deployment to Azure.
+**Problem:** You have a REST API, and you want Copilot Studio agents to be able to call it — just like they call built-in tools.
 
-**Input:** Your API details (base URL, credentials, endpoints)  
-**Output:** Ready-to-deploy TypeScript server code
+**Solution:** This kit generates the wrapper code (a TypeScript MCP server) that bridges your API and Copilot Studio, handling authentication, error handling, and deployment.
 
 ---
 
