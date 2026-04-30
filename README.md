@@ -25,6 +25,7 @@ The wizard has two paths:
 <img width="700" height="390" alt="image" src="https://github.com/user-attachments/assets/6f2c13f0-d70e-4179-8f32-6458c939a710" />
 
 
+
 **Learn first** — Start with a working sample using the Open Library public API.
 Run live API calls in the browser, download the pre-built server files, deploy to Azure,
 and connect to a Copilot Studio agent — end to end, before touching your own API.
