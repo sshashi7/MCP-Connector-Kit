@@ -26,7 +26,7 @@ This toolkit generates TypeScript MCP servers for Copilot Studio **PoC/demo purp
 
 **Prefer to run locally for maximum privacy?** No problem — everything is self-contained.
 
-### Option 1: Download & Open (Simplest)
+### Download & Open
 ```bash
 # Download mcp-connector-kit.html from this repo
 # Then just double-click it, or:
