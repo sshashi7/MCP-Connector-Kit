@@ -21,7 +21,8 @@ No installation, no dependencies, no network required.
 ## 🧭 How it works
 
 The wizard has two paths:
-<img width="698" height="390" alt="image" src="https://github.com/user-attachments/assets/6f2c13f0-d70e-4179-8f32-6458c939a710" />
+
+<img width="700" height="390" alt="image" src="https://github.com/user-attachments/assets/6f2c13f0-d70e-4179-8f32-6458c939a710" />
 
 
 **Learn first** — Start with a working sample using the Open Library public API.
