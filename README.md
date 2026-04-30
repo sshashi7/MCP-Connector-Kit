@@ -1,6 +1,6 @@
 # Copilot Studio · MCP Connector Kit
 
-Make any REST API callable by a Copilot Studio agent — in minutes, not days.
+Turn any REST API into an MCP tool your Copilot Studio agent can reason over — in minutes, not days.
 
 Configure your API, define your tools, pick an auth pattern, and the wizard
 generates your MCP server files, walks you through deploying to Azure App Service,
