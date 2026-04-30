@@ -36,7 +36,7 @@ and connect to a Copilot Studio agent — end to end, before touching your own A
 1. **API details** — Enter your API base URL, connector name, and choose an auth pattern
 2. **Define tools** — Describe each endpoint the agent can call — name, method, path, and parameters
 3. **Security** — Configure your inbound key, or token validation for Entra flows
-4. **Generate & download** — The wizard downloads your complete server project files: `server.ts`, `package.json`, `tsconfig.json`, `.env.example`, `.gitignore`, and `DEPLOYMENT.md`
+4. **Generate & download** — The wizard downloads your complete MCP server project files.
 5. **System check** — Verify Node 20+, Azure CLI, and Copilot Studio access are ready
 6. **Deploy** — Run the pre-filled PowerShell commands to test locally, then deploy to Azure App Service with a single `az webapp up` command
 7. **Connect to Copilot Studio** — The wizard generates step-by-step MCP connection instructions tailored to your auth type
